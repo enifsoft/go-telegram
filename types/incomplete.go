@@ -19,7 +19,9 @@ type MessageOrigin struct{}
 type ExternalReplyInfo struct{}
 type TextQuote struct{}
 type Story struct{}
-type MessageEntity struct{}
+
+//type MessageEntity struct{}
+
 type LinkPreviewOptions struct{}
 type Animation struct{}
 type Audio struct{}
