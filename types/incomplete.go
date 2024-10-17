@@ -14,8 +14,8 @@ type ChatLocation struct{}
 // From Message
 
 // type Chat struct{}
+//type MessageOrigin struct{}
 
-type MessageOrigin struct{}
 type ExternalReplyInfo struct{}
 type TextQuote struct{}
 type Story struct{}
