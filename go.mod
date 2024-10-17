@@ -1,3 +1,3 @@
-module github.com/aprf-go/telegram-types
+module github.com/enifsoft/go-telegram-types
 
 go 1.23.0
