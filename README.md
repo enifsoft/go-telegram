@@ -11,13 +11,11 @@ types, making it easier to build Telegram bots in Go with type safety.
 ### Installation
 
 ```bash
-go get github.com/enifsoft/go-telegram-types
+go get github.com/enifsoft/go-telegram
 ```
 
 ### Usage
 
-```go
-import (
-"github.com/enifsoft/go-telegram-types"
-)
+```
+import "github.com/enifsoft/go-telegram/types"
 ```
