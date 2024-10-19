@@ -3,8 +3,8 @@ package types
 type ChatFullInfo struct {
 	ID                                 int64                 `json:"id"`                                                // Unique identifier for this chat
 	Type                               string                `json:"type"`                                              // Type of the chat: "private", "group", "supergroup", or "channel"
-	AccentColorID                      int                   `json:"accent_color_id"`                                   // Identifier of the accent color
-	MaxReactionCount                   int                   `json:"max_reaction_count"`                                // Maximum number of reactions per message
+	AccentColorID                      int32                 `json:"accent_color_id"`                                   // Identifier of the accent color
+	MaxReactionCount                   int32                 `json:"max_reaction_count"`                                // Maximum number of reactions per message
 	Title                              string                `json:"title,omitempty"`                                   // Optional. Title for supergroups, channels, and group chats
 	Username                           string                `json:"username,omitempty"`                                // Optional. Username for private chats, supergroups, and channels
 	FirstName                          string                `json:"first_name,omitempty"`                              // Optional. First name in a private chat
@@ -19,10 +19,10 @@ type ChatFullInfo struct {
 	PersonalChat                       *Chat                 `json:"personal_chat,omitempty"`                           // Optional. Personal channel in private chats
 	AvailableReactions                 []ReactionType        `json:"available_reactions,omitempty"`                     // Optional. Allowed reactions in the chat
 	BackgroundCustomEmojiID            string                `json:"background_custom_emoji_id,omitempty"`              // Optional. Custom emoji ID for background
-	ProfileAccentColorID               *int                  `json:"profile_accent_color_id,omitempty"`                 // Optional. Accent color ID for profile background
+	ProfileAccentColorID               int                   `json:"profile_accent_color_id,omitempty"`                 // Optional. Accent color ID for profile background
 	ProfileBackgroundCustomEmojiID     string                `json:"profile_background_custom_emoji_id,omitempty"`      // Optional. Custom emoji ID for profile background
 	EmojiStatusCustomEmojiID           string                `json:"emoji_status_custom_emoji_id,omitempty"`            // Optional. Custom emoji ID for emoji status
-	EmojiStatusExpirationDate          *int                  `json:"emoji_status_expiration_date,omitempty"`            // Optional. Expiration date for emoji status (Unix time)
+	EmojiStatusExpirationDate          int                   `json:"emoji_status_expiration_date,omitempty"`            // Optional. Expiration date for emoji status (Unix time)
 	Bio                                string                `json:"bio,omitempty"`                                     // Optional. Bio in private chats
 	HasPrivateForwards                 bool                  `json:"has_private_forwards,omitempty"`                    // Optional. True if privacy settings restrict forwards
 	HasRestrictedVoiceAndVideoMessages bool                  `json:"has_restricted_voice_and_video_messages,omitempty"` // Optional. True if voice/video messages are restricted
@@ -33,9 +33,9 @@ type ChatFullInfo struct {
 	PinnedMessage                      *Message              `json:"pinned_message,omitempty"`                          // Optional. Most recent pinned message
 	Permissions                        *ChatPermissions      `json:"permissions,omitempty"`                             // Optional. Default chat member permissions
 	CanSendPaidMedia                   bool                  `json:"can_send_paid_media,omitempty"`                     // Optional. True if paid media messages can be sent
-	SlowModeDelay                      *int                  `json:"slow_mode_delay,omitempty"`                         // Optional. Minimum delay between messages for unprivileged users (in seconds)
-	UnrestrictBoostCount               *int                  `json:"unrestrict_boost_count,omitempty"`                  // Optional. Boost count to ignore slow mode
-	MessageAutoDeleteTime              *int                  `json:"message_auto_delete_time,omitempty"`                // Optional. Auto-delete time for messages (in seconds)
+	SlowModeDelay                      int                   `json:"slow_mode_delay,omitempty"`                         // Optional. Minimum delay between messages for unprivileged users (in seconds)
+	UnrestrictBoostCount               int                   `json:"unrestrict_boost_count,omitempty"`                  // Optional. Boost count to ignore slow mode
+	MessageAutoDeleteTime              int                   `json:"message_auto_delete_time,omitempty"`                // Optional. Auto-delete time for messages (in seconds)
 	HasAggressiveAntiSpamEnabled       bool                  `json:"has_aggressive_anti_spam_enabled,omitempty"`        // Optional. True if aggressive anti-spam is enabled
 	HasHiddenMembers                   bool                  `json:"has_hidden_members,omitempty"`                      // Optional. True if only admins and bots are visible
 	HasProtectedContent                bool                  `json:"has_protected_content,omitempty"`                   // Optional. True if messages can't be forwarded
@@ -43,6 +43,6 @@ type ChatFullInfo struct {
 	StickerSetName                     string                `json:"sticker_set_name,omitempty"`                        // Optional. Group sticker set name
 	CanSetStickerSet                   bool                  `json:"can_set_sticker_set,omitempty"`                     // Optional. True if the bot can change the sticker set
 	CustomEmojiStickerSetName          string                `json:"custom_emoji_sticker_set_name,omitempty"`           // Optional. Custom emoji sticker set name
-	LinkedChatID                       *int64                `json:"linked_chat_id,omitempty"`                          // Optional. Linked chat ID
+	LinkedChatID                       int64                 `json:"linked_chat_id,omitempty"`                          // Optional. Linked chat ID
 	Location                           *ChatLocation         `json:"location,omitempty"`                                // Optional. Chat location
 }
